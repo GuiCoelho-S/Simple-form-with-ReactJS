@@ -10,12 +10,24 @@ class App extends Component {
     return ( 
       <Container maxWidth="sm" component="article">
         <Typography variant="h4" align="center" gutterBottom component="h1">Formulário Cadastro</Typography>
-        <FormularioCadastro/>
+        <FormularioCadastro aoEnviar={aoEnviarForm} validarCpf={validarCPF}/>
       </Container>
       
     );
   }
 }
  
+function aoEnviarForm(dados){
+  console.log(dados);
+}
+
+function validarCPF(cpf){
+  if(cpf.length !== 11){
+    return {valido:false, texto:"CPF deve ter 11 dígitos"}
+  } else {
+    return {valido:true, texto:""}
+  }
+}
+
 export default App;
 
