@@ -1,6 +1,5 @@
 
 import {React, Component } from 'react';
-import './App.css';
 import FormularioCadastro from './components/formularioCadastro/formularioCadastro';
 import {Container,Typography} from '@material-ui/core';
 
